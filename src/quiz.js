@@ -71,4 +71,28 @@ class Quiz {
         this.currentQuestionIndex = 0;
     }
 
+    // Method to display the current question and answer choices
+displayQuestion() {
+        if (this.currentQuestionIndex < this.questions.length) {
+            const questionContainer = document.getElementById("question-container");
+            questionContainer.innerHTML = `<h2>${this.questions[this.currentQuestionIndex].question}</h2>`;
+            const choices = this.questions[this.currentQuestionIndex].choices;
+            choices.forEach((choice, index) => {
+                questionContainer.innerHTML += `<button onclick="quiz.checkAnswer(${index})">${choice}</button>`;
+            });
+        } else {
+            this.calculateAndShowResults();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
