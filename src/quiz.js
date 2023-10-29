@@ -102,7 +102,7 @@ class Quiz {
         const resultContainer = document.getElementById("result-container");
         resultContainer.innerHTML = `<h2>Your Score: ${this.score}/${this.questions.length}</h2>`;
         
-        if (this.score < this.questions.length / 6) {
+        if (this.score < 6) {
             resultContainer.innerHTML += "<p>Please try again for a better score.</p>";
             resultContainer.innerHTML += '<button onclick="quiz.restartQuiz()">Try Again</button>';
         } else {
