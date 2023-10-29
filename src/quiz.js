@@ -120,9 +120,10 @@ class Quiz {
         resultContainer.innerHTML = ""; // Clear result container
     }
 
-
-
-
-
-
 }
+
+// Create a new Quiz instance with the provided questions.
+// Display the first question to start the quiz.
+
+let quiz = new Quiz(questions);
+quiz.displayQuestion();
