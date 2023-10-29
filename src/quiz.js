@@ -72,7 +72,7 @@ class Quiz {
     }
 
     // Method to display the current question and answer choices
-displayQuestion() {
+    displayQuestion() {
         if (this.currentQuestionIndex < this.questions.length) {
             const questionContainer = document.getElementById("question-container");
             questionContainer.innerHTML = `<h2>${this.questions[this.currentQuestionIndex].question}</h2>`;
@@ -85,7 +85,16 @@ displayQuestion() {
         }
     }
 
-
+    // Method to check the user's answer and update the score
+     checkAnswer(selectedIndex) {
+        const correctAnswer = this.questions[this.currentQuestionIndex].correctAnswer;
+        if (this.questions[this.currentQuestionIndex].choices[selectedIndex] === correctAnswer) {
+            this.score++;
+        } 
+        this.currentQuestionIndex++;
+        this.displayQuestion();
+        
+    }
 
 
 
