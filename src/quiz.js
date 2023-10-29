@@ -85,7 +85,7 @@ class Quiz {
         }
     }
 
-    // Method to check the user's answer and update the score
+// Method to check the user's answer and update the score
      checkAnswer(selectedIndex) {
         const correctAnswer = this.questions[this.currentQuestionIndex].correctAnswer;
         if (this.questions[this.currentQuestionIndex].choices[selectedIndex] === correctAnswer) {
@@ -96,6 +96,19 @@ class Quiz {
         
     }
 
+// Calculate the final score and show results, prompting the user to try again if needed
+    
+ calculateAndShowResults() {
+        const resultContainer = document.getElementById("result-container");
+        resultContainer.innerHTML = `<h2>Your Score: ${this.score}/${this.questions.length}</h2>`;
+        
+        if (this.score < this.questions.length / 6) {
+            resultContainer.innerHTML += "<p>Please try again for a better score.</p>";
+            resultContainer.innerHTML += '<button onclick="quiz.restartQuiz()">Try Again</button>';
+        } else {
+            resultContainer.innerHTML += "<p>Congratulations! You passed the quiz.</p>";
+        }
+    }
 
 
 
