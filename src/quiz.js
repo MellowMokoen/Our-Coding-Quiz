@@ -61,4 +61,14 @@ let questions = [
     },
 ];
 
+// Add class constructor
+// Initialize the quiz with an array of questions, set the initial score to 0,
+// and start at the first question (currentQuestionIndex = 0).
+class Quiz {
+    constructor(questions) {
+        this.questions = questions;
+        this.score = 0;
+        this.currentQuestionIndex = 0;
+    }
 
+}
