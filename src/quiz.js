@@ -110,7 +110,15 @@ class Quiz {
         }
     }
 
+    // Restart the quiz by resetting the score and question index
 
+     restartQuiz() {
+        this.score = 0;
+        this.currentQuestionIndex = 0;
+        this.displayQuestion();
+        const resultContainer = document.getElementById("result-container");
+        resultContainer.innerHTML = ""; // Clear result container
+    }
 
 
 
