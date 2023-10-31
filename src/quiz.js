@@ -1,5 +1,5 @@
-// Define questions, choices, and correct answers
-let questions = [
+    // Define questions, choices, and correct answers
+ let questions = [
     {
         question: "Which of the following is not a valid CSS selector?",
         choices: [".my-class", "#my_id", "$invalid", "h1"],
