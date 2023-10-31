@@ -83,9 +83,19 @@ class Quiz {
         } else {
             this.calculateAndShowResults();
         }
+
+        this.showProgress();
+    }
+  
+    // Method to show progress information
+    showProgress() {
+      const currentQuestionNumber = this.currentQuestionIndex + 1;
+      const totalQuestions = this.questions.length;
+      const element = document.getElementById("progress");
+      element.innerHTML = `Question ${currentQuestionNumber} of ${totalQuestions}`;
     }
 
-// Method to check the user's answer and update the score
+    // Method to check the user's answer and update the score
      checkAnswer(selectedIndex) {
         const correctAnswer = this.questions[this.currentQuestionIndex].correctAnswer;
         if (this.questions[this.currentQuestionIndex].choices[selectedIndex] === correctAnswer) {
@@ -99,9 +109,12 @@ class Quiz {
 // Calculate the final score and show results, prompting the user to try again if needed
     
  calculateAndShowResults() {
-        const resultContainer = document.getElementById("result-container");
+        const resultContainer = document.getElementById("question-container");
         resultContainer.innerHTML = `<h2>Your Score: ${this.score}/${this.questions.length}</h2>`;
         
+        let progressContainer = document.getElementById("progress");
+        progressContainer.innerHTML = "";
+
         if (this.score < 6) {
             resultContainer.innerHTML += "<p>Please try again for a better score.</p>";
             resultContainer.innerHTML += '<button onclick="quiz.restartQuiz()">Try Again</button>';
@@ -118,6 +131,7 @@ class Quiz {
         this.displayQuestion();
         const resultContainer = document.getElementById("result-container");
         resultContainer.innerHTML = ""; // Clear result container
+        
     }
 
 }
