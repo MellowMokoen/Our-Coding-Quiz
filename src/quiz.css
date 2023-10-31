@@ -23,6 +23,17 @@ h1 {
     margin-bottom: 50px;
 }
 
+h2 {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 30px;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
 button {
     background-color: indianred;
     width: 250px;

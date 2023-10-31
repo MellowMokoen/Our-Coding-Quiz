@@ -108,14 +108,18 @@ class Quiz {
 
 // Calculate the final score and show results, prompting the user to try again if needed
     
- calculateAndShowResults() {
+     calculateAndShowResults() {
         const resultContainer = document.getElementById("question-container");
-        resultContainer.innerHTML = `<h2>Your Score: ${this.score}/${this.questions.length}</h2>`;
-        
-        let progressContainer = document.getElementById("progress");
-        progressContainer.innerHTML = "";
+        resultContainer.innerHTML = `<h2>You got : ${this.score}/${this.questions.length}</h2>`;
+ 
+        // Hide the progress when the results display
 
-        if (this.score < 6) {
+        let progressContainer = document.getElementById("progress");
+        progressContainer.style.display = "none";
+        
+        // The conditions for scores less than 5 or higher
+
+        if (this.score < 5) {
             resultContainer.innerHTML += "<p>Please try again for a better score.</p>";
             resultContainer.innerHTML += '<button onclick="quiz.restartQuiz()">Try Again</button>';
         } else {
