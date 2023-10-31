@@ -17,16 +17,32 @@
     ></script>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Playpen Sans"
+      href="https://fonts.googleapis.com/css?family=Tilt Neon"
     />
     <link rel="stylesheet" href="src/quiz.css" />
+    <style>
+      body {
+        font-family: "Tilt Neon";
+        background-color: black;
+        background-image: url("giphy\ \(3\).gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 100vh;
+      }
+    </style>
   </head>
   <body>
     <div class="quiz-container">
-      <h1>Coding Quiz</h1>
-      <div id="question-container"></div>
-      <div id="result-container"></div>
+      <h1></h1>
+
+      <div class="text-center m-4" id="question-container"></div>
+      <div class="text-center" id="result-container"></div>
+      <footer>
+        <p id="progress">Question x of y</p>
+      </footer>
     </div>
+
     <script src="src/quiz.js"></script>
   </body>
 </html>
