@@ -120,10 +120,10 @@ class Quiz {
         // The conditions for scores less than 5 or higher
 
         if (this.score < 5) {
-            resultContainer.innerHTML += "<p>Please try again for a better score.</p>";
+            resultContainer.innerHTML += "<p>Please try again , harder this time.</p>";
             resultContainer.innerHTML += '<button onclick="quiz.restartQuiz()">Try Again</button>';
         } else {
-            resultContainer.innerHTML += "<p>Congratulations! You passed the quiz.</p>";
+            resultContainer.innerHTML += "<p>Well done! You did good.</p>";
         }
     }
 
