@@ -83,7 +83,7 @@ class Quiz {
         } else {
             this.calculateAndShowResults();
         }
-
+      // Calling for the showProgress to display along with the corresponding questions
         this.showProgress();
     }
   
