@@ -13,5 +13,6 @@ The coding quiz was build using HTML , CSS and JavaScript. We have the following
 
 # Netlify link 
 
-- [Our Coding Quiz](https://charming-nasturtium-b76f9d.netlify.app/){target="_blank"}
+- <a href="https://charming-nasturtium-b76f9d.netlify.app/" target="_blank">Our Coding Quiz</a>
+
 
